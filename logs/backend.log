@@ -1,0 +1,157 @@
+2025-05-20 00:37:42.671 | INFO     | src.data_ingestion.load_file:detect_encoding:16 - Encoding detectado para reporte-01233.txt: UTF-8-SIG
+2025-05-20 00:37:42.704 | INFO     | src.data_ingestion.load_file:load_txt:31 - Archivo reporte-01233.txt cargado con shape (543, 18)
+2025-05-20 00:37:42.708 | INFO     | src.preprocessing.clean_data:rename_cast:33 - Columnas renombradas y casteadas
+2025-05-20 00:37:42.788 | INFO     | src.preprocessing.clean_data:clean:101 - Duplicados eliminados: 0
+2025-05-20 00:37:42.788 | INFO     | src.api.main:process_file:81 - Archivo procesado y guardado clean.pkl
+2025-05-20 00:40:24.373 | WARNING  | src.ml.train:train:33 - Columnas categóricas detectadas: ['RAZON SOCIAL', 'Ddiario', 'Sub_diario', 'Fecha', 'Documento', 'Fecha Doc.', 'Fecha Vcto.', 'Moneda', 'Usuario', 'Detalle de concepto']
+2025-05-20 00:40:28.467 | INFO     | src.ml.train:train:61 - RandomForest metrics:
+              precision    recall  f1-score   support
+
+     7000473       1.00      1.00      1.00         3
+     7000474       1.00      1.00      1.00         4
+     7040123       1.00      1.00      1.00         1
+     7040355       1.00      1.00      1.00         1
+     7040424       1.00      1.00      1.00         1
+     7040605       0.00      0.00      0.00         0
+     7040609       1.00      1.00      1.00         1
+     7040610       0.00      0.00      0.00         1
+     7040654       0.00      0.00      0.00         0
+     7040670       0.00      0.00      0.00         1
+     7040673       0.00      0.00      0.00         1
+     7040710       0.00      0.00      0.00         1
+     7040730       0.00      0.00      0.00         1
+     7040742       1.00      1.00      1.00         1
+     7040764       0.00      0.00      0.00         0
+     7040765       1.00      1.00      1.00         1
+     7040789       1.00      1.00      1.00         1
+     7040840       0.00      0.00      0.00         2
+     7040879       0.00      0.00      0.00         0
+     7040908       1.00      1.00      1.00         1
+     7041175       0.00      0.00      0.00         1
+     7041437       0.00      0.00      0.00         0
+     7041781       1.00      1.00      1.00         1
+     7042037       1.00      1.00      1.00         1
+     7042460       0.00      0.00      0.00         1
+     7042461       0.00      0.00      0.00         0
+     7042462       0.00      0.00      0.00         1
+     7042470       0.00      0.00      0.00         1
+     7080016       1.00      1.00      1.00         4
+     7080023       1.00      1.00      1.00         1
+     7080025       1.00      1.00      1.00         1
+     7080057       1.00      1.00      1.00         2
+     7080060       1.00      1.00      1.00         1
+     7080067       1.00      1.00      1.00         1
+     7080177       1.00      1.00      1.00         1
+     7080280       0.00      0.00      0.00         1
+     7080557       1.00      1.00      1.00         1
+     7080564       0.00      0.00      0.00         1
+     7080594       1.00      0.50      0.67         2
+     7080689       0.25      1.00      0.40         1
+     7080697       0.00      0.00      0.00         0
+     7080702       0.00      0.00      0.00         1
+     7080776       1.00      1.00      1.00         1
+     7080883       0.00      0.00      0.00         1
+     7160037       1.00      1.00      1.00         1
+     7160310       1.00      1.00      1.00         1
+     7160319       1.00      1.00      1.00         1
+     7161211       1.00      1.00      1.00         1
+     7180004       1.00      1.00      1.00         1
+     7180006       1.00      1.00      1.00         1
+     7190008       1.00      0.75      0.86         4
+     7190009       0.00      0.00      0.00         2
+     7190047       1.00      1.00      1.00         3
+     7990002       1.00      1.00      1.00        26
+     7990004       1.00      1.00      1.00        14
+     7990005       1.00      1.00      1.00         3
+     7990007       1.00      1.00      1.00         2
+     7990009       1.00      1.00      1.00         1
+
+    accuracy                           0.83       109
+   macro avg       0.61      0.61      0.60       109
+weighted avg       0.84      0.83      0.83       109
+
+2025-05-20 00:40:28.800 | INFO     | src.ml.train:train:63 - Modelo guardado en C:\Users\fcarrillo\Desktop\Codin\fastapi_ml\src\ml\model.joblib
+2025-05-20 00:43:55.800 | WARNING  | src.ml.train:train:33 - Columnas categóricas detectadas: ['RAZON SOCIAL', 'Ddiario', 'Sub_diario', 'Fecha', 'Documento', 'Fecha Doc.', 'Fecha Vcto.', 'Moneda', 'Usuario', 'Detalle de concepto']
+2025-05-20 00:43:59.612 | INFO     | src.ml.train:train:61 - RandomForest metrics:
+              precision    recall  f1-score   support
+
+     7000473       1.00      1.00      1.00         3
+     7000474       1.00      1.00      1.00         4
+     7040123       1.00      1.00      1.00         1
+     7040355       1.00      1.00      1.00         1
+     7040424       1.00      1.00      1.00         1
+     7040605       0.00      0.00      0.00         0
+     7040609       1.00      1.00      1.00         1
+     7040610       0.00      0.00      0.00         1
+     7040654       0.00      0.00      0.00         0
+     7040670       0.00      0.00      0.00         1
+     7040673       0.00      0.00      0.00         1
+     7040710       0.00      0.00      0.00         1
+     7040730       0.00      0.00      0.00         1
+     7040742       1.00      1.00      1.00         1
+     7040764       0.00      0.00      0.00         0
+     7040765       1.00      1.00      1.00         1
+     7040789       1.00      1.00      1.00         1
+     7040840       0.00      0.00      0.00         2
+     7040879       0.00      0.00      0.00         0
+     7040908       1.00      1.00      1.00         1
+     7041175       0.00      0.00      0.00         1
+     7041437       0.00      0.00      0.00         0
+     7041781       1.00      1.00      1.00         1
+     7042037       1.00      1.00      1.00         1
+     7042460       0.00      0.00      0.00         1
+     7042461       0.00      0.00      0.00         0
+     7042462       0.00      0.00      0.00         1
+     7042470       0.00      0.00      0.00         1
+     7080016       1.00      1.00      1.00         4
+     7080023       1.00      1.00      1.00         1
+     7080025       1.00      1.00      1.00         1
+     7080057       1.00      1.00      1.00         2
+     7080060       1.00      1.00      1.00         1
+     7080067       1.00      1.00      1.00         1
+     7080177       1.00      1.00      1.00         1
+     7080280       0.00      0.00      0.00         1
+     7080557       1.00      1.00      1.00         1
+     7080564       0.00      0.00      0.00         1
+     7080594       1.00      0.50      0.67         2
+     7080689       0.25      1.00      0.40         1
+     7080697       0.00      0.00      0.00         0
+     7080702       0.00      0.00      0.00         1
+     7080776       1.00      1.00      1.00         1
+     7080883       0.00      0.00      0.00         1
+     7160037       1.00      1.00      1.00         1
+     7160310       1.00      1.00      1.00         1
+     7160319       1.00      1.00      1.00         1
+     7161211       1.00      1.00      1.00         1
+     7180004       1.00      1.00      1.00         1
+     7180006       1.00      1.00      1.00         1
+     7190008       1.00      0.75      0.86         4
+     7190009       0.00      0.00      0.00         2
+     7190047       1.00      1.00      1.00         3
+     7990002       1.00      1.00      1.00        26
+     7990004       1.00      1.00      1.00        14
+     7990005       1.00      1.00      1.00         3
+     7990007       1.00      1.00      1.00         2
+     7990009       1.00      1.00      1.00         1
+
+    accuracy                           0.83       109
+   macro avg       0.61      0.61      0.60       109
+weighted avg       0.84      0.83      0.83       109
+
+2025-05-20 00:43:59.946 | INFO     | src.ml.train:train:63 - Modelo y columnas guardados en C:\Users\fcarrillo\Desktop\Codin\fastapi_ml\src\ml\model.joblib
+2025-05-20 00:44:19.513 | DEBUG    | src.ml.predict:predict_one:40 - Predicción realizada: 7990002
+2025-05-20 00:46:44.251 | DEBUG    | src.ml.predict:predict_one:40 - Predicción realizada: 7990002
+2025-05-20 00:46:51.587 | DEBUG    | src.ml.predict:predict_one:40 - Predicción realizada: 7990002
+2025-05-20 00:46:55.496 | DEBUG    | src.ml.predict:predict_one:40 - Predicción realizada: 7990002
+2025-05-20 00:47:00.127 | DEBUG    | src.ml.predict:predict_one:40 - Predicción realizada: 7990002
+2025-05-20 00:48:04.176 | DEBUG    | src.ml.predict:predict_one:40 - Predicción realizada: 7990002
+2025-05-20 00:48:49.906 | INFO     | src.analysis.stats:detect_outliers:30 - Debe_MN: μ=865.02, σ=3001.56, outliers=26
+2025-05-20 00:48:49.906 | INFO     | src.analysis.stats:detect_outliers:30 - Haber_MN: μ=821.38, σ=3163.83, outliers=24
+2025-05-20 00:48:49.906 | INFO     | src.analysis.stats:detect_outliers:30 - Debe_ME: μ=240.73, σ=792.95, outliers=28
+2025-05-20 00:48:49.906 | INFO     | src.analysis.stats:detect_outliers:30 - Haber_ME: μ=231.08, σ=836.90, outliers=24
+2025-05-20 00:49:02.539 | INFO     | src.reports.generate_pdf:to_pdf:17 - PDF guardado en C:\Users\fcarrillo\Desktop\Codin\fastapi_ml\src\reports\resultado.pdf
+2025-05-20 00:49:21.618 | INFO     | src.analysis.stats:detect_outliers:30 - Debe_MN: μ=865.02, σ=3001.56, outliers=26
+2025-05-20 00:49:21.624 | INFO     | src.analysis.stats:detect_outliers:30 - Haber_MN: μ=821.38, σ=3163.83, outliers=24
+2025-05-20 00:49:21.624 | INFO     | src.analysis.stats:detect_outliers:30 - Debe_ME: μ=240.73, σ=792.95, outliers=28
+2025-05-20 00:49:21.624 | INFO     | src.analysis.stats:detect_outliers:30 - Haber_ME: μ=231.08, σ=836.90, outliers=24
+2025-05-20 00:49:22.211 | INFO     | src.reports.generate_excel:to_excel:9 - Excel guardado en C:\Users\fcarrillo\Desktop\Codin\fastapi_ml\src\reports\resultado.xlsx
