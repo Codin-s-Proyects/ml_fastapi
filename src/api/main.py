@@ -3,7 +3,7 @@ FastAPI – endpoints REST completos.
 """
 
 from __future__ import annotations
-
+import io
 from pathlib import Path
 from typing import List
 
@@ -22,6 +22,8 @@ from src.ml.train import train as train_model
 from src.ml.predict import predict_one, ModelNotTrainedError
 from src.reports.generate_excel import to_excel
 from src.reports.generate_pdf import to_pdf
+from fastapi.responses import StreamingResponse
+
 
 app = FastAPI(title="Accounting ML Backend", version="1.0.0")
 
@@ -116,7 +118,15 @@ def download_excel():
     )
     excel_path = REPORT_DIR / "resultado.xlsx"
     to_excel(outliers, excel_path)
-    return FileResponse(excel_path, media_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
+
+    with excel_path.open("rb") as f:
+        content = io.BytesIO(f.read())
+
+    return StreamingResponse(
+        content,
+        media_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        headers={"Content-Disposition": "inline; filename=resultado.xlsx"}
+    )   
 
 
 @app.get("/download-pdf")
@@ -132,4 +142,12 @@ def download_pdf():
     )
     pdf_path = REPORT_DIR / "resultado.pdf"
     to_pdf(outliers, pdf_path)
-    return FileResponse(pdf_path, media_type="application/pdf")
+
+    with pdf_path.open("rb") as f:
+        content = io.BytesIO(f.read())
+
+    return StreamingResponse(
+        content,
+        media_type="application/pdf",
+        headers={"Content-Disposition": "inline; filename=resultado.pdf"}
+    )
