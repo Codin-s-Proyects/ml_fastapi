@@ -30,7 +30,10 @@ app = FastAPI(title="Accounting ML Backend", version="1.0.0")
 # --- CORS (Next.js front local por defecto) ---------------------
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "https://*"],
+    allow_origins=[
+        "http://localhost:3000",
+        "https://tesis-fe-94ns.vercel.app",  # producción vercel
+    ],    
     allow_methods=["*"],
     allow_headers=["*"],
 )
